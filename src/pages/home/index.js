@@ -11,12 +11,12 @@ function HomePage() {
     let s = null;
 
     useEffect(() => {
-        s = new Scroll({
-            eleID: "roulette-container-1",
-            scrollID: "item-case-goods-1",
-            // targetID: "roulette-container-1-open",
-            pageSize: 3,
-        })
+        // s = new Scroll({
+        //     eleID: "roulette-container-1",
+        //     scrollID: "item-case-goods-1",
+        //     // targetID: "roulette-container-1-open",
+        //     pageSize: 3,
+        // })
     }, []);
 
     const onStart = () => {
@@ -27,7 +27,8 @@ function HomePage() {
 
     return (
         <View className='index'>
-          <div className="roulette-container" id="roulette-container-1">
+          <p>1111</p>
+          {/* <div className="roulette-container" id="roulette-container-1">
             <ul id="item-case-goods-1" className="item-case-goods">
                 <li className="item-small-case restricted" data-id="1">
                     <img className="content-img" src={img1Src} alt="" />
@@ -45,7 +46,7 @@ function HomePage() {
           </div>
           <div>
               <Button className='start-btn' onClick={onStart}>开始</Button>
-          </div>
+          </div> */}
         </View>
       )
 }
