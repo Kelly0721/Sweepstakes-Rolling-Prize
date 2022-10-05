@@ -26,7 +26,7 @@ function HomePage() {
     }
 
     return (
-        <View className='index'>
+        <div className='index'>
           <div className="roulette-container" id="roulette-container-1">
             <ul id="item-case-goods-1" className="item-case-goods">
                 <li className="item-small-case restricted" data-id="1">
@@ -46,7 +46,7 @@ function HomePage() {
           <div>
               <Button className='start-btn' onClick={onStart}>开始</Button>
           </div>
-        </View>
+        </div>
       )
 }
 

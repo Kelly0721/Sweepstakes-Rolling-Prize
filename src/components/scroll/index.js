@@ -35,11 +35,9 @@ Scroll.prototype.init = function () {
     // this._scrollElement.style['-ms-transition'] = transition;
     // this._scrollElement.style['-o-transition'] = transition;
     // this._scrollElement.style['transition'] = transition;
-    // console.log(this._scrollElement.children)
     this.createNoneElement();
     let list = Array.from(this._scrollElement.children);
     this._len = list.length;
-    // this._itemWidth = this._scrollElement.clientWidth;
     this._itemHeight = this._scrollElement.children[0].clientHeight;
     console.log(this._itemHeight)
     list.forEach((item, index) => {
@@ -63,18 +61,6 @@ Scroll.prototype.createNoneElement = function () {
 
 Scroll.prototype.start = function (winId) {
     let n = this._ids[winId] ? this._ids[winId] : this._ids[undefined],
-    // x = ((this._size - 1) * this._len + Number(n)) * this._itemWidth;
-    // if (this._targetElement) {
-    //     x = x - (this._targetElement.offsetLeft + this._targetElement.clientWidth / 2) + this._itemWidth / 2;
-    // }
-    // console.log('winId=' + winId, 'x=' + x);
-    // this._scrollElement.style.transform = 'translateX(0%)';
-    // this._scrollElement.style['transition-duration'] = '0ms';
-    // let handle = setTimeout(() => {
-    // this._scrollElement.style['transition-duration'] = this._duration + 's';
-    // this._scrollElement.style.transform = 'translateX(-' + x + 'px)';
-    //     clearTimeout(handle);
-    // })
     y =((this._size - 1) * this._len + Number(n)) * this._itemHeight;
     this._scrollElement.style.transform = 'translateY(0%)';
     this._scrollElement.style['transition-duration'] = '0ms';
